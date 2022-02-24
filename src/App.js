@@ -22,7 +22,7 @@ function App() {
           <Navbar className="Color" variant="dark">
             <Container>
               <Navbar.Brand>
-                <Link to={"/products-list"} className="nav-link text-light">
+                <Link to={"/"} className="nav-link text-light">
                   <ShoppingCartIcon /> Shopping Kart
                 </Link>
               </Navbar.Brand>
