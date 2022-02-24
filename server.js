@@ -3,10 +3,10 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const dbConfig = require("./database/db");
-const path = require("path");
 
 // Express Route
 const productRoute = require("./routes/productsroute");
+const path = require("path");
 
 // Connecting mongoDB Database
 var dbconnection = require("./database/db");
