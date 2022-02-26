@@ -6,7 +6,6 @@ const dbConfig = require("./database/db");
 
 // Express Route
 const productRoute = require("./routes/productsroute");
-const path = require("path");
 
 // Connecting mongoDB Database
 var dbconnection = require("./database/db");
@@ -21,13 +20,6 @@ app.use(
 app.use(cors());
 app.use("/products", productRoute);
 
-if (process.env.NODE_ENV === "production") {
-  app.use("/", express.static("../client/build"));
-
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "../client/build/index.html"));
-  });
-}
 // PORT
 const port = process.env.PORT || 4000;
 const server = app.listen(port, () => {
